@@ -8,10 +8,12 @@
         "php": "^8.0.2",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.2",
-        "laravel/sanctum": "^2.14.1",
+        "laravel/jetstream": "1.*",
+        "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.7",
         "laravel/ui": "^3.4",
-        "laravelcollective/html": "^6.3"
+        "laravelcollective/html": "^6.3",
+        "livewire/livewire": "^2.0"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.12",
