@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Kyslik\ColumnSortable\Sortable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
@@ -18,7 +19,7 @@ class User extends Authenticatable
     use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
-
+    use Sortable;
     /**
      * The attributes that are mass assignable.
      *
@@ -63,4 +64,12 @@ class User extends Authenticatable
     protected $dispatchesEvents = [
         'created' => UserCreated::class
     ];
+
+    public $sorttable =
+        [
+            'id',
+            'name',
+            'email'
+        ];
+
 }
